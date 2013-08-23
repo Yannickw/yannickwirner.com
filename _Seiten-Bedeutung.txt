@@ -1,0 +1,18 @@
+Welche Seite beinhaltet was:
+============================
+Nach Menü-Reihenfolge sortiert:
+
+(alle mit Endung ".html")
+
+index 	 	 = Home 		-- Accueil
+Biographie 	 = Biographie 		-- Curriculum Vitae
+Ensembles 	 = Ensembles 		-- Formations
+Duo 		 = Wirner/Steininger 	-- Duo de piano
+Quintett 	 = Diana-Quintett 	-- Quintette
+Konzerte 	 = Konzerte 		-- Concerts
+Repertoire 	 = Repertoire 		-- Répertoire
+Piano 		 = Piano 		-- Piano
+Celesta 	 = Celesta 		-- Célésta
+Links 		 = Hörbeispiele(Links) 	-- Multimedia
+Kontakt 	 = Kontakt 		-- Contact
+Impressum 	 = Impressum 		-- Informations légales

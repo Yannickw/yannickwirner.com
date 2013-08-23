@@ -1,0 +1,201 @@
+-Farbanpassung aller Layout-Grafiken via XN-View (1.94.2): Helligkeit/Kontrast: -62/+20
+
+- Hintergrund auf schwarz via "\css\design80.css"-edit: 
+background-color:#747B7F (dunkelgrau) --> #000000 (schwarz)
+background-color:#BDBFC2 (hellgrau)--> #000000 (schwarz)
+
+- Hintergrund auf scharz zum 2.
+"\css\custom.css" 
+ 2x "background: #747B7F" (dunkelgrau) --> #000000 (schwarz)
+
+
+- Hintergrundgrafiken von d.blau auf schwarz ändern (manuell via Gimp)
+\images\
+ - body_bg_rep.gif (GIF-Bildfarbpalette erst um schwarz erweitern)
+ - flogo_left.gif (GIF-Bildfarbpalette erst um schwarz erweitern; via markieren + manuellem schwarz ausmalen)
+ - table_left.gif (via d.blaue Farbe zu schwarz bearbeiten + untere rechte ecke mit schwarzem Pinsel ausmalen)
+ - table_top.gif (via manuellem schwarz ausfüllen)
+ - top.gif (GIF-Bildfarbpalette erst um schwarz erweitern; via manuellem schwarz ausfüllen)
+ - top_1.gif (GIF-Bildfarbpalette erst um schwarz erweitern; via markieren + manuellem schwarz ausmalen)
+ - top_2.gif (via manuellem schwarz ausfüllen)
+
+\images\keyvisual
+ - customkey.png (via manuellem schwarz ausfüllen)
+
+- Biographie (_6604216): 15er-Abstand ums Bild einfügen: 
+  --> hspace="15" vspace="15"
+  und Text nochmals am Stück reinkopieren, damit Satzbild besser wird (oder <div> Tags gezielt löschen)
+
+- Klavierquintett (_6604220): unter Überschrift Leerzeile einfügen
+  --> <br>
+
+- Konzerte (_6604221): evtl. aktualisieren
+
+- Repertoire-Piano (_6604223): um Tabelle ergänzen
+
+- Sprachlink einbauen auf allen html-Seiten (i.gif ersetzen durch 173x13 px language_.gif, 11er Verdana):
+
+  zu ersetztendes:
+  <tr valign="top"><td colspan="2"><img border="0" height="13" width="173" alt="" src="images/i.gif"></td></tr>
+
+  ersetzen mit:
+  <tr valign="top"><td colspan="2">
+<a onMouseOut="MM_swapImgRestore()" onMouseOver="
+          MM_swapImage('menuimglanguage_',''
+          ,'images/tree/language_a.gif',1)
+          " href="LINK_NOCH_ERGÄNZEN"><img src="images/tree/language_.gif" border="0" alt="en français" title="en français" name="menuimglanguage_"></a><script>MM_preloadImages('images/tree/language_a.gif')</script>
+</td></tr>
+
+- Kontaktformular (_6604225) ersetzen und via freenet bauen:
+  ==========================================================
+  ersetzten:
+  ----------
+  <script type="text/javascript">
+  	 	function setLink(){
+			timezoneOffset = new Date().getTimezoneOffset();
+			activities.location.href = "/cgi-bin/livepages_iframe_loader.php?bgcolor=747B7F&textcolor=93a7c2&css_no=2&link_underline=false&text_size=12&link_color=84CFFF&url=http://www.livepages.de/activities///feedback/prepareSendFeedback.do&pageid=6604225&lang=de"+"&timezoneOffset="+timezoneOffset;
+			resizeCaller();
+		}
+  	   	 
+		if (window.addEventListener)
+			window.addEventListener("load", setLink, false);
+		else if (window.attachEvent)
+			window.attachEvent("onload", setLink);
+		else
+			window.onload=setLink;
+     </script>
+     <script type="text/javascript" language="JavaScript" src="js/dynamic.js"></script>
+
+  mit:
+  ----------
+<script language="javascript">
+  function checkit(){
+     document.forms['myform'].elements['mailform_answer'][(document.forms['myform'].elements['mailform_answer'].length - 1)].checked = true;
+  }
+</script>
+
+<form name="myform" method="post" action="http://freenet-homepage.de/yannickwirner/tools/formgenerator/mailformdata.php">
+  <input type="hidden" name="mailform_form_id" value="71847"><br></p>
+  <table style="width:100%;border:solid 0px #cc6600;background:#000000;
+         font-family:Arial,Verdana,Helvetica,sans-serif;font-size:8pt;">
+    <tr>
+      <td style="padding-left:10px;height:30px;vertical-align:middle;
+          font-family:Arial,Verdana,Helvetica,sans-serif;font-size:10pt;"><b>Kontaktformular</b></td>
+      <td style="width:10px;">&nbsp;</td>
+      <td style="width:100%;">&nbsp;</td>
+    </tr>
+    <tr>
+      <td style="padding-left:10px;vertical-align:middle;">Name:</td>
+      <td style="padding-right:5px;padding-top:5px;text-align:right;font-size:10pt;color:#ff0000;">
+      *      </td>
+      <td style="padding-right:20px;">
+        <input type="text" name="mailform_surname" style="height:20px;width:100%;
+               font-family:Arial,Verdana,Helvetica,sans-serif;font-size:8pt;"></td>
+    </tr>
+    <tr>
+      <td style="padding-left:10px;vertical-align:middle;">Vorname:</td>
+      <td style="width:10px;padding-right:5px;padding-top:5px;text-align:right;font-size:10pt;color:#ff0000;">&nbsp;
+            </td>
+      <td style="padding-right:20px;">
+        <input type="text" name="mailform_forename" style="height:20px;width:100%;
+               font-family:Arial,Verdana,Helvetica,sans-serif;font-size:8pt;"></td>
+    </tr>
+    <tr>
+      <td style="padding-left:10px;vertical-align:middle;">E-Mail:</td>
+      <td style="width:10px;padding-right:5px;padding-top:5px;text-align:right;font-size:10pt;color:#ff0000;">
+      *      </td>
+      <td style="padding-right:20px;">
+        <input type="text" name="mailform_email" style="height:20px;width:100%;
+               font-family:Arial,Verdana,Helvetica,sans-serif;font-size:8pt;"></td>
+    </tr>
+    <tr>
+      <td style="padding-left:10px;vertical-align:middle;" nowrap>Strasse, Hausnummer:</td>
+      <td style="width:10px;padding-right:5px;padding-top:5px;text-align:right;font-size:10pt;color:#ff0000;">&nbsp;
+            </td>
+      <td style="padding-right:20px;">
+        <input type="text" name="mailform_street" style="height:20px;width:100%;
+               font-family:Arial,Verdana,Helvetica,sans-serif;font-size:8pt;"></td>
+    </tr>
+    <tr>
+      <td style="padding-left:10px;vertical-align:middle;">PLZ, Stadt:</td>
+      <td style="width:10px;padding-right:5px;padding-top:5px;text-align:right;font-size:10pt;color:#ff0000;">&nbsp;
+            </td>
+      <td style="padding-right:20px;">
+        <input type="text" name="mailform_city" style="height:20px;width:100%;
+               font-family:Arial,Verdana,Helvetica,sans-serif;font-size:8pt;"></td>
+    </tr>
+    <tr>
+      <td style="padding-left:10px;vertical-align:middle;">Telefonnummer:</td>
+      <td style="width:10px;padding-right:5px;padding-top:5px;text-align:right;font-size:10pt;color:#ff0000;">&nbsp;
+            </td>
+      <td style="padding-right:20px;">
+        <input type="text" name="mailform_phone" style="height:20px;width:100%;
+               font-family:Arial,Verdana,Helvetica,sans-serif;font-size:8pt;"></td>
+    </tr>
+    <tr>
+      <td style="padding-left:10px;padding-top:5px;vertical-align:top;">Text:</td>
+      <td style="width:10px;padding-right:5px;padding-top:5px;text-align:right;vertical-align:top;font-size:10pt;color:#ff0000;">
+      *      </td>
+      <td style="padding-right:20px;">
+        <textarea name="mailform_text" style="height:160px;width:100%;
+                  font-family:Arial,Verdana,Helvetica,sans-serif;font-size:8pt;"></textarea></td>
+    </tr>
+
+    <tr>
+      <td colspan="3" style="padding:10px;">
+        Die mit einem <span style="font-size:10pt;color:#ff0000;">*</span> gekennzeichneten Felder m&uuml;ssen ausgef&uuml;llt werden!
+      </td>
+    </tr>
+    <tr>
+      <td colspan="3" style="padding-top:10px;padding-bottom:10px;padding-right:20px;text-align:right;">
+        <a href="javascript:document.myform.submit();"><img border="0" alt="abschicken"
+           src="images/form_button_abschicken1.gif"></a>
+      </td>
+    </tr>
+  </table>
+</form>
+
+  löschen:
+  --------
+  <iframe id="lpframe" width="462" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" vspace="0" hspace="0" name="activities"></iframe>
+
+  ===============================================
+
+- Neue Seite send_confirm.html erstellen
+
+- auf index.html-Seite Counter/Statistik-Code einfügen von netzaehler.de:
+  am einfachsten via ersetzten von:
+  ==============
+  </td></tr><tr><td class="bot" height="30"></td></tr></table></td></tr></table></div></body></html>
+
+  mit:
+  ==============
+  <tr><td class="bot" height="30"><script language="javascript">
+var data, p;
+var agt=navigator.userAgent.toLowerCase();
+p='http';
+if((location.href.substr(0,6)=='https:')||(location.href.substr(0,6)=='HTTPS:')) {p='https';} data = '&r=' + escape(document.referrer) + '&n=' + escape(navigator.userAgent) + '&p=' + escape(navigator.userAgent)
+if(navigator.userAgent.substring(0,1)>'3') {data = data + '&sd=' + screen.colorDepth + '&sw=' + escape(screen.width+ 'x'+screen.height)};
+document.write('<a href="http://www.netzaehler.de/stats.php?i=5616" target="_blank" >');
+document.write('<img border=0 hspace=0 '+'vspace=0 src="http://www.netzaehler.de/counter.php?i=5616' + data + '"> </a>');
+</script><br><a href="http://www.netzaehler.de" target="_blank"><font face="tahoma" size="1" color="#dddddd">Netzaehler.de</font></a></td></tr></table></td></tr></table></div></body></html>
+
+ ==============
+
+  evlt. den Link löschen:
+  -----------------------
+  <a href="http://www.netzaehler.de/stats.php?i=5616" target="_blank" >
+  und:
+  -----
+  <a href="http://www.netzaehler.de" target="_blank"><font face="tahoma" size="1" color="#dddddd">Netzaehler.de</font></a>
+
+- auf allen html-Seiten Counter/Statistik-Code einfügen von 4stats.de:
+  am einfachsten via ersetzten von:
+
+  <!-- 4stats Tracker Code // begin -->
+<script type="text/javascript" src="http://t2.4stats.de/de/counter?id=41574&amp;cntr=hide"></script>
+<noscript><a href="http://www.4stats.de/" target="_blank"><img src="http://t2.4stats.de/de/stats?id=41574&amp;cntr=hide" border="0" alt="4stats Webseiten Statistik + Counter" /></a></noscript>
+<!-- 4stats Tracker Code // end -->
+
+#####################################################
+Französisch Anpassung:

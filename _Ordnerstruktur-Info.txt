@@ -1,0 +1,23 @@
+#HTML-Seiten selbst
+===================
+- (liegen auf Root)
+
+#verwendete Fotos
+=======================================================
+\images
+
+#alles was mit Grunddesign zu tun (Bögen, Logo, ...)
+=======================================================
+\images
+
+#Top-Grafik (ganz oben) 
+=======================================================
+\images\keyvisual
+
+#Navigationsmenügrafiken
+=======================================================
+\images\tree
+
+#Textgröße+Farbe sowie Hintergrundfarbe etc. ist im Css
+=======================================================
+\css
